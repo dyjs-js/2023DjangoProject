@@ -1,0 +1,17 @@
+{
+    "name": "We are done",
+    "country": "한국",
+    "city": "경기",
+    "price": 1000,
+    "rooms": 3,
+    "toilets": 2,
+    "description": "drf is good",
+    "address": "Seoul, Korea",
+    "category":6,
+    "pet_friendly": true,
+    "amenities":[2,3],
+    "kind": "private_room"}
+
+
+    {  "category": 7
+    }
