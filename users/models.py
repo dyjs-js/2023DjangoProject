@@ -31,7 +31,7 @@ class User(AbstractUser):
     is_host = models.BooleanField(
         default=False,
     )
-    avatar = models.ImageField(blank=True)  # 필드를 비어놓을 수 있도록 blank = True
+    avatar = models.URLField(blank=True)  # 필드를 비어놓을 수 있도록 blank = True
     gender = models.CharField(
         max_length=10,
         choices=Genderchoices,
