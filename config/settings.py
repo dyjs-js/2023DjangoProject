@@ -11,16 +11,19 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+import environ
 
+env = environ.Env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-%ys2ev3+ztu36=lgco&t)2gi&6g*y%)(jhtw!ynbnjjqrq6&$q"
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -159,5 +162,6 @@ REST_FRAMEWORK = {
         "config.authentication.TrustBroAuthentication",
         # admin패널에 token 관리 생성
         "rest_framework.authentication.TokenAuthentication",
+        "config.authentication.JWTAuthentication",
     ]
 }
