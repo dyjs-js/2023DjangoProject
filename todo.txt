@@ -1,14 +1,19 @@
 ### Experiences (TODOS)
 2024-02-26
 
-- POST /experiences 
-- GET PUT DELETE /experiences/1
-- GET /experiences/1/perks [x] 
--  GET POST /perks [x]
-- GET PUT DELETE /perks/1
+- POST POST /experiences [v] 3/1
+- GET PUT DELETE /experiences/1 [v] 3/1
+- GET /experiences/1/perks 
+- GET POST /perks [x]
+- GET PUT DELETE /perks/1 [x]
 - GET POST /experiences/1/bookings
 - GET PUT DELETE /experiences/1/bookings/2
 
 
 ## Users
 GET /Users/@username/reviews
+
+##WishList
+GET POST /wishlists [v]
+GET PUT DELETE /wishlists/1
+PUT /wishlists/1/rooms/2 [v]

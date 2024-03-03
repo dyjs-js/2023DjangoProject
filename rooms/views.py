@@ -97,7 +97,7 @@ class Rooms(APIView):
                 raise ParseError("Category is required.")
             try:
                 category = Category.objects.get(pk=category_pk)
-                if category.kind == Category.CategoryKindChoices.EXPERIENCES:
+                if category.kind != Category.CategoryKindChoices.EXPERIENCES:
                     raise ParseError("Category kind should be 'rooms'")
             except Category.DoesNotExist:
                 raise ParseError("Invalid category number or category does not exist.")
